@@ -83,7 +83,7 @@ export const TextGreen = styled.span`
 
 export const Section = styled.div`
   width: 100%;
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
   @media (max-width: 992px) {
     padding: 1rem 1.5rem;
   }
