@@ -58,40 +58,44 @@ function App() {
     <>
       <GlobalStyles />
       <Main>
-        <Header>
-          <HeaderContainer>
-            <Logo>
-              <LogoName>Alexandre</LogoName>
-              <LogoInfo>.info()</LogoInfo>
-            </Logo>
-            <Nav>
-              <List>
-                <Item>
-                  <Link>
-                    .About<TextGreen>()</TextGreen>
-                  </Link>
-                </Item>
-                <Item>
-                  <Link>
-                    .Skills<TextGreen>()</TextGreen>
-                  </Link>
-                </Item>
-                <Item>
-                  <Link>
-                    .Experience<TextGreen>()</TextGreen>
-                  </Link>
-                </Item>
-              </List>
-            </Nav>
-          </HeaderContainer>
-        </Header>
-        <Section
-          style={{
-            marginTop: '5rem',
-          }}
+        <motion.div
+          initial={{ y: -250 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
         >
+          <Header>
+            <HeaderContainer>
+              <Logo>
+                <LogoName>Alexandre</LogoName>
+                <LogoInfo>.info()</LogoInfo>
+              </Logo>
+              <Nav>
+                <List>
+                  <Item>
+                    <Link>
+                      .About<TextGreen>()</TextGreen>
+                    </Link>
+                  </Item>
+                  <Item>
+                    <Link>
+                      .Skills<TextGreen>()</TextGreen>
+                    </Link>
+                  </Item>
+                  <Item>
+                    <Link>
+                      .Experience<TextGreen>()</TextGreen>
+                    </Link>
+                  </Item>
+                </List>
+              </Nav>
+            </HeaderContainer>
+          </Header>
+        </motion.div>
+        <Section>
           <Container
             style={{
+              height: '100vh',
+              alignItems: 'center',
               justifyContent: 'space-between',
               maxWidth: '100rem',
               margin: '0 auto',
