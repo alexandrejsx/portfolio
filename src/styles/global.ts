@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     * {
@@ -19,5 +19,11 @@ export default createGlobalStyle`
         overflow-x: hidden;
         background: var(--dark-grey);
         color: var(--white);
+    }
+    .slick-dots li.slick-active button:before {
+        color: #94F3E4;
+    }
+    .slick-prev:before, .slick-next:before {
+        color: #94F3E4;
     }
 `;
