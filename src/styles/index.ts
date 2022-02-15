@@ -127,7 +127,7 @@ export const SectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 2rem 0 0;
   @media (max-width: 992px) {
     flex-direction: column;
   }
