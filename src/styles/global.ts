@@ -19,6 +19,7 @@ export default createGlobalStyle`
         overflow-x: hidden;
         background: var(--dark-grey);
         color: var(--white);
+        scroll-behavior: smooth;
     }
     .slick-dots li.slick-active button:before {
         color: #94F3E4;
