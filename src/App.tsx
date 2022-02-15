@@ -36,10 +36,20 @@ function App() {
               <ResumeComponent />
             </Container>
           </Section>
-          <Section id="about">
+          <Section
+            id="about"
+            style={{
+              marginTop: "2rem",
+            }}
+          >
             <AboutComponent />
           </Section>
-          <Section id="skills">
+          <Section
+            id="skills"
+            style={{
+              marginTop: "2rem",
+            }}
+          >
             <SkillsComponent />
           </Section>
           <Section id="footer">
