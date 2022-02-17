@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import GlobalStyles from "./styles/global";
@@ -18,6 +19,7 @@ import FooterComponent from "./components/FooterComponent";
 
 function App() {
   const { i18n } = useTranslation();
+  const [languageChecked, setLanguageChecked] = useState<boolean>(false);
 
   function handleChangeLanguage(checked) {
     const language = checked ? "pt-BR" : "en-US";
@@ -25,7 +27,17 @@ function App() {
     localStorage.setItem("i18nextLng", language);
 
     i18n.changeLanguage(language);
+
+    setLanguageChecked(checked);
   }
+
+  useEffect(() => {
+    const language = localStorage.getItem("i18nextLng");
+
+    const checked = language && language === "pt-BR" ? true : false;
+
+    setLanguageChecked(checked);
+  }, []);
 
   return (
     <>
@@ -53,6 +65,7 @@ function App() {
             >
               <SwitchButton>
                 <SwitchButtonCheckBox
+                  checked={languageChecked}
                   onChange={(e) => handleChangeLanguage(e.target.checked)}
                 />
                 <SwitchButtonLabel>
