@@ -86,7 +86,7 @@ function App() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 maxWidth: "100rem",
-                margin: "0 auto",
+                margin: "-2rem auto 0",
               }}
             >
               <ResumeComponent />
