@@ -11,7 +11,7 @@ export const Header = styled.header`
   top: 0;
   z-index: 999;
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 0.5rem 5rem;
   background: var(--dark-grey);
   @media (max-width: 992px) {
     padding: 2%;
@@ -73,9 +73,9 @@ export const TextGreen = styled.span`
 
 export const Section = styled.div`
   width: 100%;
-  padding: 1rem 5rem;
+  padding: 5rem 5rem 0;
   @media (max-width: 992px) {
-    padding: 1rem 1.5rem;
+    padding: 4rem 1.5rem 0;
   }
 `;
 
@@ -195,4 +195,85 @@ export const TechTitle = styled.span`
 
 export const Footer = styled.footer`
   text-align: center;
+  padding-bottom: 1rem;
+`;
+
+export const TextLanguage = styled.p`
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: white;
+`;
+
+export const SwitchButtonLabel = styled.label`
+  position: relative;
+  padding: 5px 0;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+
+  &:before {
+    content: "";
+    background: var(--dark-grey);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    transform: translateX(20);
+    transition: transform 300ms;
+  }
+`;
+
+export const SwitchButtonLabelSpan = styled.span`
+  position: relative;
+  font-size: 0.75rem;
+  vertical-align: 0.1rem;
+`;
+
+export const SwitchButtonCheckBox = styled.input.attrs({ type: "checkbox" })`
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  border: 1px solid var(--light-green);
+
+  &:checked + ${SwitchButtonLabel}:before {
+    transform: translateX(90px);
+    transition: transform 300ms linear;
+  }
+`;
+
+export const SwitchButton = styled.div`
+  background: var(--grey);
+  border-radius: 30px;
+  border: 1px solid var(--light-green);
+  overflow: hidden;
+  width: 180px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--green);
+  position: relative;
+  padding-right: 90px;
+  position: relative;
+  font-size: 0.75rem;
+
+  &:before {
+    content: "Português";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+  }
 `;

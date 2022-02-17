@@ -22,9 +22,9 @@ export default createGlobalStyle`
         scroll-behavior: smooth;
     }
     .slick-dots li.slick-active button:before {
-        color: #94F3E4;
+        color: var(--light-green);
     }
     .slick-prev:before, .slick-next:before {
-        color: #94F3E4;
+        color: var(--light-green);
     }
 `;
